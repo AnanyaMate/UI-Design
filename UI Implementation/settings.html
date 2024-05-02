@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Kitchenful</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kitchenful Settings</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="user_profile.html">Profile</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="meal_planning.html">Meal Planning</a></li>
+                <li><a href="recipe_search.html">Recipes</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="settings">
+            <h2>Account Settings</h2>
+            <form id="settings-form" onsubmit="return saveSettings()">
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" name="user-name">
+
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" name="user-email">
+
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" name="current-password">
+
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password">
+
+                <label for="confirm-new-password">Confirm New Password:</label>
+                <input type="password" id="confirm-new-password" name="confirm-new-password">
+
+                <h3>Notification Preferences</h3>
+                <label for="email-notifications">Email Notifications:</label>
+                <select id="email-notifications" name="email-notifications">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+
+                <label for="app-notifications">App Notifications:</label>
+                <select id="app-notifications" name="app-notifications">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+
+                <h3>Display Preferences</h3>
+                <label for="theme-preference">Theme:</label>
+                <select id="theme-preference" name="theme-preference">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kitchenful. All rights reserved.</p>
+    </footer>
+    <script>
+        function saveSettings() {
+            alert('Your settings have been saved successfully!');
+            return false; // Prevent actual form submission for demonstration purposes
+        }
+    </script>
+</body>
+</html>

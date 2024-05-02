@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Kitchenful</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kitchenful Support</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="user_profile.html">Profile</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="meal_planning.html">Meal Planning</a></li>
+        <li><a href="recipe_search.html">Recipes</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>How can we help you?</h2>
+      <form id="support-form" onsubmit="return submitSupportForm()">
+        <label for="support-query">Your question or issue:</label>
+        <textarea id="support-query" name="support-query" rows="4" required></textarea>
+
+        <label for="user-email">Your email:</label>
+        <input type="email" id="user-email" name="user-email" required>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="confirmation-message" style="display:none;">
+        <p>Thank you for contacting us. We will get back to you within 24 hours.</p>
+      </div>
+      <div class="additional-resources">
+        <p>For immediate assistance, check out our <a href="faqs.html">FAQs</a> or contact us directly at <a
+            href="mailto:support@kitchenful.com">support@kitchenful.com</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Kitchenful. All rights reserved.</p>
+  </footer>
+  <script>
+    function submitSupportForm() {
+      document.getElementById('confirmation-message').style.display = 'block';
+      return false; // Prevent form from actually submitting for demo purposes
+    }
+  </script>
+</body>
+</html>

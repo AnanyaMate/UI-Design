@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Kitchenful</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="user_profile.html">Profile</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="meal_planning.html">Meal Planning</a></li>
+                <li><a href="recipe_search.html">Recipes</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profile">
+            <h2>Your Profile</h2>
+            <form id="profile-form">
+                <div class="form-row">
+                    <label for="profile-name">Name:</label>
+                    <input type="text" id="profile-name" name="profile-name">
+                </div>
+
+                <div class="form-row">
+                    <label for="profile-email">Email:</label>
+                    <input type="email" id="profile-email" name="profile-email">
+                </div>
+
+                <div class="form-row">
+                    <label for="dietary-preferences">Dietary Preferences:</label>
+                    <select id="dietary-preferences" name="dietary-preferences">
+                        <option value="none">None</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten-Free</option>
+                        <option value="keto">Keto</option>
+                    </select>
+                </div>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kitchenful. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Kitchenful</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Register for Kitchenful</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="user_profile.html">Profile</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="meal_planning.html">Meal Planning</a></li>
+        <li><a href="recipe_search.html">Recipes</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form id="registration-form" action="register.php" method="POST" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+        placeholder="Enter your email address">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="8" placeholder="Create a password">
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024 Kitchenful. All rights reserved.</p>
+  </footer>
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirm-password').value;
+
+      if (!name || !email) {
+        alert("Please fill out all fields.");
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

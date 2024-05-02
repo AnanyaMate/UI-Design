@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search - Kitchenful</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Search</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="user_profile.html">Profile</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="meal_planning.html">Meal Planning</a></li>
+                <li><a href="recipe_search.html">Recipes</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="recipe-search">
+            <form id="search-form" onsubmit="return performSearch()">
+                <input type="text" id="search-keyword" name="search-keyword" placeholder="Search recipes..." required>
+                <select id="meal-type" name="meal-type">
+                    <option value="">All Types</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snack">Snack</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section class="recipe-results" id="recipe-results">
+            <!-- Results will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kitchenful. All rights reserved.</p>
+    </footer>
+    <script>
+        function performSearch() {
+            const resultsContainer = document.getElementById('recipe-results');
+            resultsContainer.innerHTML = '<p>Searching...</p>'; // Display a loading message
+
+            // Simulate a search result delay and display
+            setTimeout(() => {
+                const searchKeyword = document.getElementById('search-keyword').value;
+                const mealType = document.getElementById('meal-type').value;
+                resultsContainer.innerHTML = `<h3>Results for "${searchKeyword}" (${mealType}):</h3>
+                <article class="recipe">
+                    <h2>Sample Recipe Title</h2>
+                    <p>Description of the recipe that matches the search criteria.</p>
+                </article>`;
+            }, 2000);
+
+            return false; // Prevent form from actually submitting
+        }
+    </script>
+</body>
+</html>
